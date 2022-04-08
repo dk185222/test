@@ -24,7 +24,6 @@ public class IdentityServiceRest {
 
 	@GetMapping(value = "/info")
 	public ResponseEntity<String> getInfo() {
-
 		return new ResponseEntity<>("get info call", HttpStatus.OK);
 	}
 
