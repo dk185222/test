@@ -1,0 +1,8 @@
+# SERVER
+server:
+  port: 9530
+  servlet:
+    context-path: /test-service
+   
+
+

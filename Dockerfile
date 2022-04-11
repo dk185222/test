@@ -1,4 +1,4 @@
 FROM openjdk:11
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} test-app.jar
-ENTRYPOINT ["java","-jar","/test-app.jar"]
+EXPOSE 9530
+ADD test.jar test.jar
+ENTRYPOINT [ "java","-jar","/test.jar" ]
