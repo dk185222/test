@@ -25,7 +25,7 @@ public class IdentityServiceRest {
 
 	@GetMapping(value = "/info")
 	public ResponseEntity<String> getInfo() {
-		return new ResponseEntity<>("test triger 0001..!", HttpStatus.OK);
+		return new ResponseEntity<>("test triger 0003..!", HttpStatus.OK);
 	}
 
 }
