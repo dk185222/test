@@ -25,7 +25,7 @@ public class IdentityServiceRest {
 
 	@GetMapping(value = "/info")
 	public ResponseEntity<String> getInfo() {
-		return new ResponseEntity<>("test triger 0006..!", HttpStatus.OK);
+		return new ResponseEntity<>("Welcome to test CI/CD sample..!", HttpStatus.OK);
 	}
 
 }
