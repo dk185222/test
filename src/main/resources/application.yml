@@ -6,11 +6,7 @@ server:
     context-path: /test-service
     
     
-management:
- endpoints:
-  web:
-   exposure:
-    include: health,info,prometheus
+
 
 
 
