@@ -25,13 +25,15 @@ import io.micrometer.core.annotation.Timed;
 public class IdentityServiceRest {
 
 	@GetMapping(value = "/info")
-	@Timed
+	@Timed(value = "monitoring.info.request", histogram = true, percentiles = { 0.95, 0.99 }, extraTags = { "version",
+			"1.0" })
 	public ResponseEntity<String> getInfo() {
 		return new ResponseEntity<>("Welcome to test CI/CD sample..!", HttpStatus.OK);
 	}
 
 	@GetMapping(value = "/test")
-	@Timed
+	@Timed(value = "monitoring.test.request", histogram = true, percentiles = { 0.95, 0.99 }, extraTags = { "version",
+			"1.0" })
 	public ResponseEntity<String> getTest() {
 		return new ResponseEntity<>("Welcome to test CI/CD sample..!", HttpStatus.OK);
 	}
