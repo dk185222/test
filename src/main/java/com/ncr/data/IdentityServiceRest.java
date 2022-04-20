@@ -18,8 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.micrometer.core.annotation.Timed;
 
 /**
- * test 
- *IdentityServiceRest.java
+ * test IdentityServiceRest.java
  */
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -28,6 +27,12 @@ public class IdentityServiceRest {
 	@GetMapping(value = "/info")
 	@Timed
 	public ResponseEntity<String> getInfo() {
+		return new ResponseEntity<>("Welcome to test CI/CD sample..!", HttpStatus.OK);
+	}
+
+	@GetMapping(value = "/test")
+	@Timed
+	public ResponseEntity<String> getTest() {
 		return new ResponseEntity<>("Welcome to test CI/CD sample..!", HttpStatus.OK);
 	}
 
