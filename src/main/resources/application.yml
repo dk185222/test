@@ -4,6 +4,13 @@ server:
   port: 9530
   servlet:
     context-path: /test-service
+    
+    
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
    
 
 

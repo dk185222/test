@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.micrometer.core.annotation.Timed;
+
 /**
  * test 
  *IdentityServiceRest.java
@@ -24,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IdentityServiceRest {
 
 	@GetMapping(value = "/info")
+	@Timed
 	public ResponseEntity<String> getInfo() {
 		return new ResponseEntity<>("test triger 0006..!", HttpStatus.OK);
 	}
